@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_recipes_steps",
+  "info": {
+    "displayName": "steps",
+    "icon": "fire-alt"
+  },
+  "options": {},
+  "attributes": {
+    "step": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

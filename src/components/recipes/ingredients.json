@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_recipes_ingredients",
+  "info": {
+    "displayName": "ingredients",
+    "icon": "coffee"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "quantity": {
+      "type": "string"
+    }
+  }
+}

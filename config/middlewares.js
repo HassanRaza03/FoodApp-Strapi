@@ -1,0 +1,36 @@
+module.exports = [
+  "strapi::errors",
+  "strapi::security",
+  {
+    name: "strapi::cors",
+    config: {
+      origin: [
+        "https://FoodApp-staging-260a9.web.app",
+        "http://localhost:1337",
+        "http://localhost:3000",
+        "https://ff6b-182-188-42-224.eu.ngrok.io",
+        "https://707c-182-188-42-224.in.ngrok.io",
+        "https://a5f0-182-188-42-224.in.ngrok.io",
+        "https://c2fb-182-188-42-224.in.ngrok.io",
+        "https://eathealthytonight.com",
+        "https://foodee-webapp.web.app",
+      ],
+      methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "HEAD", "OPTIONS"],
+      headers: [
+        "Content-Type",
+        "Authorization",
+        "Origin",
+        "Accept",
+        "Access-Control-Allow-Origin",
+      ],
+      keepHeaderOnError: true,
+    },
+  },
+  "strapi::poweredBy",
+  "strapi::logger",
+  "strapi::query",
+  "strapi::body",
+  "strapi::session",
+  "strapi::favicon",
+  "strapi::public",
+];

@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_sidebar_meals_sidebar_meal_edamams",
+  "info": {
+    "displayName": "sidebar-meal-edamam",
+    "icon": "balance-scale-left"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "type": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

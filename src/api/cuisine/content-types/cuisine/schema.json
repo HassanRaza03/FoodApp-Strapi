@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cuisines",
+  "info": {
+    "singularName": "cuisine",
+    "pluralName": "cuisines",
+    "displayName": "cuisine",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "recipes": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::recipe.recipe",
+      "mappedBy": "cuisine"
+    },
+    "spoonacular": {
+      "type": "string"
+    },
+    "edamam": {
+      "type": "string"
+    }
+  }
+}

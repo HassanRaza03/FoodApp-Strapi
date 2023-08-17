@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_sidebar_meals_sidebar_meal_options",
+  "info": {
+    "displayName": "sidebar-meal-options",
+    "icon": "arrow-alt-circle-up"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "minQuantity": {
+      "type": "integer",
+      "required": true
+    },
+    "unit": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

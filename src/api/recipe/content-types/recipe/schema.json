@@ -1,0 +1,90 @@
+{
+  "kind": "collectionType",
+  "collectionName": "recipes",
+  "info": {
+    "singularName": "recipe",
+    "pluralName": "recipes",
+    "displayName": "recipes",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "comments": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::comment.comment",
+      "mappedBy": "recipe"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "serves": {
+      "type": "string",
+      "required": true
+    },
+    "website": {
+      "type": "string",
+      "required": true
+    },
+    "ingredients": {
+      "displayName": "ingredients",
+      "type": "component",
+      "repeatable": true,
+      "component": "recipes.ingredients",
+      "required": true
+    },
+    "steps": {
+      "displayName": "steps",
+      "type": "component",
+      "repeatable": true,
+      "component": "recipes.steps",
+      "required": true
+    },
+    "user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "recipes"
+    },
+    "cook_time": {
+      "type": "integer",
+      "required": true,
+      "default": 5
+    },
+    "isApprove": {
+      "type": "boolean",
+      "default": false
+    },
+    "meal": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::meal.meal",
+      "inversedBy": "recipes"
+    },
+    "cuisine": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::cuisine.cuisine",
+      "inversedBy": "recipes"
+    },
+    "diet": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::diet.diet",
+      "inversedBy": "recipes"
+    }
+  }
+}

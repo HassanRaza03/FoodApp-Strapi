@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "diets",
+  "info": {
+    "singularName": "diet",
+    "pluralName": "diets",
+    "displayName": "diet",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "recipes": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::recipe.recipe",
+      "mappedBy": "diet"
+    },
+    "spoonacular": {
+      "type": "string"
+    },
+    "edamam": {
+      "type": "string"
+    }
+  }
+}

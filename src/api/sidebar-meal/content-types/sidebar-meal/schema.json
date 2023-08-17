@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sidebar_meals",
+  "info": {
+    "singularName": "sidebar-meal",
+    "pluralName": "sidebar-meals",
+    "displayName": "sidebar-meal"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "edamam": {
+      "displayName": "sidebar-meal-edamam",
+      "type": "component",
+      "repeatable": false,
+      "component": "sidebar-meals.sidebar-meal-edamam"
+    },
+    "spoonacular": {
+      "type": "component",
+      "repeatable": false,
+      "component": "sidebar-meals.sidebar-meal-edamam"
+    },
+    "options": {
+      "displayName": "sidebar-meal-options",
+      "type": "component",
+      "repeatable": true,
+      "component": "sidebar-meals.sidebar-meal-options",
+      "required": true
+    }
+  }
+}
